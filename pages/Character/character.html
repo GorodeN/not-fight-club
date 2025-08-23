@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="../../css/style.css">
 
+  <link rel="stylesheet" href="character.css">
+
   <script src="character.js"></script>
   <script src="../../index.js"></script>
   <script>
@@ -28,14 +30,14 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="character__header header">
     <div class="header__container container">
       <nav class="header__nav">
         <h1 class="header__page">Character</h1>
 
         <ul class="header__nav-buttons">
           <li><a href="/pages/Main/main.html"><img src="../../assets/icons/main.svg" alt="Go To Main Page"></a></li>
-          <li><a href="/pages/Character/character.html"><img src="../../assets/icons/character.svg"
+          <li class="active"><a href="/pages/Character/character.html"><img src="../../assets/icons/character.svg"
                 alt="Go To Character Page"></a></li>
           <li><a href="/pages/Settings/settings.html"><img src="../../assets/icons/settings.svg"
                 alt="Go To Settings Page"></a></li>
@@ -44,9 +46,9 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="character__main main">
     <div class="main__container container">
-      <div class="character">
+      <section class="character__section section">
         <div class="character__avatar">
           <img class="character__image" src="../../assets/characters/character1.png" alt="Character">
 
@@ -60,7 +62,7 @@
               <label for="character2">Character 2</label>
             </div>
 
-            <button type="button" class="character__change-btn" aria-label="Save">Fight</button>
+            <button type="button" class="character__change-btn" aria-label="Save">Save</button>
           </div>
         </div>
 
@@ -72,7 +74,7 @@
             <p class="character__loses">Loses: <span class="character__loses-count">0</span></p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </main>
 </body>

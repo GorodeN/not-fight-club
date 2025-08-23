@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -10,4 +10,136 @@ body {
   font-size: 16px;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 200px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid black;
+  color: black;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+label:has(input[type="text"]) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 40px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid black;
+  transition: all 0.25s ease;
+}
+
+button:hover,
+input[type="text"]:hover {
+  color: #1ecd97;
+  border-color: #1ecd97;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: black;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+input[type="radio"]:hover + span {
+  cursor: pointer;
+}
+
+progress {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+::-webkit-progress-bar {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 10px;
+  background-color: black;
+}
+
+::-webkit-progress-value {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 10px;
+  background-color: #1ecd97;
+}
+
+.container:not(.header__container) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+
+.header {
+  border-bottom: 2px solid black;
+}
+
+.header__container {
+  padding: 10px 20px;
+}
+
+.header__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__nav-buttons img {
+  height: 25px;
+  width: 25px;
+  transition: all 0.25s ease;
+}
+
+.header__nav-buttons img:hover {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(93%) saturate(351%)
+    hue-rotate(110deg) brightness(92%) contrast(96%);
+}
+
+.header__nav-buttons li.active img {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(93%) saturate(351%)
+    hue-rotate(110deg) brightness(92%) contrast(96%);
 }

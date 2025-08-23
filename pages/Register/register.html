@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="../../css/style.css">
 
+  <link rel="stylesheet" href="register.css">
+
   <script src="register.js"></script>
   <script src="../../index.js"></script>
   <script>
@@ -25,18 +27,20 @@
 </head>
 
 <body>
-  <main>
-    <div class="register__container">
-      <h1 class="register__title">Create Your Character</h1>
+  <main class="register__main main">
+    <div class="main__container container">
+      <section class="register__section section">
+        <h1 class="register__title">Create Your Character</h1>
 
-      <form class="register__form">
-        <label class="input-label">
-          <span class="input-title">Character Name</span>
-          <input class="input" type="text" name="character-name" id="character-name">
-        </label>
+        <form class="register__form">
+          <label class="input-label">
+            <span class="input-title">Character Name</span>
+            <input class="input" type="text" name="character-name" id="character-name">
+          </label>
 
-        <button type="button" class="register__button" aria-label="Create Character">Create Character</button>
-      </form>
+          <button type="button" class="register__button" aria-label="Create Character">Create Character</button>
+        </form>
+      </section>
     </div>
   </main>
 </body>
