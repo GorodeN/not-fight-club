@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Register</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <link rel="stylesheet" href="register.css">
+
+  <script src="register.js"></script>
+  <script src="../../index.js"></script>
+  <script>
+    if (characterInfo) {
+      try {
+        location.href = '/pages/Main/main.html';
+      } catch (e) { }
+    }
+  </script>
+</head>
+
+<body>
+  <main class="register__main main">
+    <div class="main__container container">
+      <section class="register__section section">
+        <h1 class="register__title">Create Your Character</h1>
+
+        <form class="register__form">
+          <label class="input-label">
+            <span class="input-title">Character Name</span>
+            <input class="input" type="text" name="character-name" id="character-name">
+          </label>
+
+          <button type="button" class="register__button" aria-label="Create Character">Create Character</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

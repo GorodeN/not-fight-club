@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Settings</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <link rel="stylesheet" href="settings.css">
+
+  <script src="settings.js"></script>
+  <script src="../../index.js"></script>
+  <script>
+    if (!characterInfo) {
+      try {
+        location.href = '/pages/Register/register.html';
+      } catch (e) { }
+    }
+  </script>
+</head>
+
+<body>
+  <header class="settings__header header">
+    <div class="header__container container">
+      <nav class="header__nav">
+        <h1 class="header__page">Settings</h1>
+
+        <ul class="header__nav-buttons">
+          <li><a href="/pages/Main/main.html"><img src="../../assets/icons/main.svg" alt="Go To Main Page"></a></li>
+          <li><a href="/pages/Character/character.html"><img src="../../assets/icons/character.svg"
+                alt="Go To Character Page"></a></li>
+          <li class="active"><a href="/pages/Settings/settings.html"><img src="../../assets/icons/settings.svg"
+                alt="Go To Settings Page"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="settings__main main">
+    <div class="main__container container">
+      <section class="settings__section section">
+        <form class="settings__form">
+          <label class="input-label">
+            <span class="input-title">New Character Name</span>
+            <input class="input" type="text" name="character-name" id="character-name">
+          </label>
+
+          <button type="button" class="settings__button" aria-label="Save Character Name">Save</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

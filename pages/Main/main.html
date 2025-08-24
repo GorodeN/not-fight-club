@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Main</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <link rel="stylesheet" href="main.css">
+
+  <script src="main.js"></script>
+  <script src="../../index.js"></script>
+  <script>
+    if (!characterInfo) {
+      try {
+        location.href = '/pages/Register/register.html';
+      } catch (e) { }
+    }
+  </script>
+</head>
+
+<body>
+  <header class="main__header header">
+    <div class="header__container container">
+      <nav class="header__nav">
+        <h1 class="header__page">Main</h1>
+
+        <ul class="header__nav-buttons">
+          <li class="active"><a href="/pages/Main/main.html"><img src="../../assets/icons/main.svg" alt="Go To Main Page"></a></li>
+          <li><a href="/pages/Character/character.html"><img src="../../assets/icons/character.svg"
+                alt="Go To Character Page"></a></li>
+          <li><a href="/pages/Settings/settings.html"><img src="../../assets/icons/settings.svg"
+                alt="Go To Settings Page"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main__main main">
+    <div class="main__container container">
+      <section class="main__section section">
+        <div class="main__start-fight">
+          <div class="main__enemy-select">
+            <label class="main__enemy-type input-label">
+              <img class="enemy__image" src="../../assets/enemies/enemy1.png" alt="Ultron">
+
+              <div>
+                <input type="radio" data-enemy="enemy1" name="enemy" value="Ultron" checked>
+                <span class="input-title">Ultron</span>
+                <span class="input-subtitle">(2 atk, 1 def)</span>
+              </div>
+            </label>
+
+            <label class="main__enemy-type input-label">
+              <img class="enemy__image" src="../../assets/enemies/enemy2.png" alt="Thanos">
+
+              <div>
+                <input type="radio" data-enemy="enemy2" name="enemy" value="Thanos">
+                <span class="input-title">Thanos</span>
+                <span class="input-subtitle">(1 atk, 3 def)</span>
+              </div>
+            </label>
+          </div>
+
+          <button type="button" class="main__fight-btn" aria-label="Start Fight">Fight</button>
+        </div>
+
+        <div class="main__battle battle">
+          <div class="battle__process">
+            <div class="battle__character">
+              <h2 class="battle__character-name"></h2>
+              <img class="battle__character-image" src="../../assets/characters/character1.png" alt="Character">
+              <progress class="battle__character-health--progress" min="0" max="120" value="120"></progress>
+              <p><span class="battle__character-health--remaining">120</span> / <span
+                  class="battle__character-health--general">120</span></p>
+            </div>
+
+            <div class="battle__options options">
+              <h3 class="options__description">Please pick <span class="attack-zone">1</span> Attack zone and <span
+                  class="defence-zone">2</span> Defence zones</h3>
+
+              <div class="options__zones zones">
+                <div class="zones__attack">
+                  <div class="zones__attack-type">
+                    <input type="radio" id="attack-head" name="attack" value="Head" checked>
+                    <label for="attack-head">Head</label>
+                  </div>
+                  <div class="zones__attack-type">
+                    <input type="radio" id="attack-neck" name="attack" value="Neck">
+                    <label for="attack-neck">Neck</label>
+                  </div>
+                  <div class="zones__attack-type">
+                    <input type="radio" id="attack-body" name="attack" value="Body">
+                    <label for="attack-body">Body</label>
+                  </div>
+                  <div class="zones__attack-type">
+                    <input type="radio" id="attack-belly" name="attack" value="Belly">
+                    <label for="attack-belly">Belly</label>
+                  </div>
+                  <div class="zones__attack-type">
+                    <input type="radio" id="attack-legs" name="attack" value="Legs">
+                    <label for="attack-legs">Legs</label>
+                  </div>
+                </div>
+
+                <div class="options__separator"></div>
+
+                <div class="zones__defence">
+                  <div class="zones__defence-type">
+                    <input type="checkbox" id="defence-head" name="defence" value="Head">
+                    <label for="defence-head">Head</label>
+                  </div>
+                  <div class="zones__defence-type">
+                    <input type="checkbox" id="defence-neck" name="defence" value="Neck">
+                    <label for="defence-neck">Neck</label>
+                  </div>
+                  <div class="zones__defence-type">
+                    <input type="checkbox" id="defence-body" name="defence" value="Body">
+                    <label for="defence-body">Body</label>
+                  </div>
+                  <div class="zones__defence-type">
+                    <input type="checkbox" id="defence-belly" name="defence" value="Belly">
+                    <label for="defence-belly">Belly</label>
+                  </div>
+                  <div class="zones__defence-type">
+                    <input type="checkbox" id="defence-legs" name="defence" value="Legs">
+                    <label for="defence-legs">Legs</label>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="main__attack-btn" aria-label="Attack">Attack</button>
+              <button type="button" class="main__new-fight-btn" aria-label="New Fight">New Fight</button>
+            </div>
+
+            <div class="battle__enemy">
+              <h2 class="battle__enemy-name"></h2>
+              <img class="battle__enemy-image" src="../../assets/enemies/enemy1.png" alt="Enemy">
+              <progress class="battle__enemy-health--progress" min="0" max="120" value="120"></progress>
+              <p><span class="battle__enemy-health--remaining">120</span> / <span
+                  class="battle__enemy-health--general">120</span></p>
+            </div>
+          </div>
+
+          <div class="battle__log"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

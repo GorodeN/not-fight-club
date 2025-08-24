@@ -1,0 +1,125 @@
+.main__start-fight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.main__enemy-select {
+  display: flex;
+  gap: 20px;
+}
+
+.main__enemy-type {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.enemy__image,
+.battle__enemy-image,
+.battle__character-image {
+  width: 300px;
+  height: 350px;
+  object-fit: contain;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.enemy__image {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.enemy__image:hover {
+  border-color: #1ecd97;
+}
+
+.input-subtitle {
+  color: rgb(148, 145, 145);
+  font-size: small;
+}
+
+.main__battle {
+  display: none;
+}
+
+.battle__process {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.battle__character,
+.battle__enemy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.battle__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 55px 0;
+}
+
+.options__description {
+  text-align: center;
+}
+
+.options__zones {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.zones__attack,
+.zones__defence {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options__separator {
+  border-right: 1px solid black;
+}
+
+.main__new-fight-btn {
+  display: none;
+}
+
+.battle__log {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0;
+  margin-top: 40px;
+  border-top: 1px solid black;
+}
+
+.log-character {
+  color: green;
+  font-weight: bold;
+}
+
+.log-enemy {
+  color: red;
+  font-weight: bold;
+}
+
+.log-zone {
+  color: blue;
+  font-weight: bold;
+}
+
+.log-damage {
+  font-weight: bold;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Character</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <link rel="stylesheet" href="character.css">
+
+  <script src="character.js"></script>
+  <script src="../../index.js"></script>
+  <script>
+    if (!characterInfo) {
+      try {
+        location.href = '/pages/Register/register.html';
+      } catch (e) { }
+    }
+  </script>
+</head>
+
+<body>
+  <header class="character__header header">
+    <div class="header__container container">
+      <nav class="header__nav">
+        <h1 class="header__page">Character</h1>
+
+        <ul class="header__nav-buttons">
+          <li><a href="/pages/Main/main.html"><img src="../../assets/icons/main.svg" alt="Go To Main Page"></a></li>
+          <li class="active"><a href="/pages/Character/character.html"><img src="../../assets/icons/character.svg"
+                alt="Go To Character Page"></a></li>
+          <li><a href="/pages/Settings/settings.html"><img src="../../assets/icons/settings.svg"
+                alt="Go To Settings Page"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="character__main main">
+    <div class="main__container container">
+      <section class="character__section section">
+        <div class="character__avatar">
+          <img class="character__image" src="#" alt="Character">
+
+          <div class="character__change">
+            <div class="character__change-type">
+              <input type="radio" id="character1" data-character-avatar="character1" name="character" value="Character 1" checked>
+              <label for="character1">Iron Man</label>
+            </div>
+            <div class="character__change-type">
+              <input type="radio" id="character2" data-character-avatar="character2" name="character" value="Character 2">
+              <label for="character2">Thor</label>
+            </div>
+
+            <button type="button" class="character__change-btn" aria-label="Save">Save</button>
+          </div>
+        </div>
+
+        <div class="character__info">
+          <h2 class="character__name"></h2>
+
+          <div class="character__stats">
+            <p class="character__wins">Wins: <span class="character__wins-count">0</span></p>
+            <p class="character__loses">Loses: <span class="character__loses-count">0</span></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
