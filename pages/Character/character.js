@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const BASE_PATH = window.location.pathname.includes('/not-fight-club/') 
+  ? '/not-fight-club/' 
+  : '/';
+
   const characterImg = document.querySelector(".character__image");
   const characterTypeRadios = document.querySelectorAll(
     '.character__change-type input[type="radio"]'
@@ -8,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const characterLoses = document.querySelector(".character__loses-count");
   const characterChangeBtn = document.querySelector(".character__change-btn");
 
-  characterImg.src = `/assets/characters/${
+  characterImg.src = `${BASE_PATH}assets/characters/${
     JSON.parse(characterInfo).avatar
   }.png`;
   characterName.innerHTML = JSON.parse(characterInfo).name;
@@ -26,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     characterRadio.addEventListener("change", function () {
       if (this.checked) {
-        characterImg.src = `/assets/characters/${characterRadio.dataset.characterAvatar}.png`;
+        characterImg.src = `${BASE_PATH}assets/characters/${characterRadio.dataset.characterAvatar}.png`;
       }
     });
   });

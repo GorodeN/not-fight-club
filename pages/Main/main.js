@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const BASE_PATH = window.location.pathname.includes('/not-fight-club/') 
+  ? '/not-fight-club/' 
+  : '/';
+
   const config = {
     maxHealth: 120,
     damage: 20,
@@ -89,9 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
     enemy = battleState.enemy;
 
     characterName.textContent = character.name;
-    characterImg.src = `/assets/characters/${character.avatar}.png`;
+    characterImg.src = `${BASE_PATH}assets/characters/${character.avatar}.png`;
     enemyName.textContent = enemy.name;
-    enemyImg.src = `/assets/enemies/${enemy.avatar}.png`;
+    enemyImg.src = `${BASE_PATH}assets/enemies/${enemy.avatar}.png`;
 
     updateHealth();
     updateDefenceOptions();
@@ -154,10 +158,10 @@ document.addEventListener("DOMContentLoaded", function () {
     saveBattleState();
 
     characterName.textContent = character.name;
-    characterImg.src = `/assets/characters/${character.avatar}.png`;
+    characterImg.src = `${BASE_PATH}assets/characters/${character.avatar}.png`;
 
     enemyName.textContent = enemy.name;
-    enemyImg.src = `/assets/enemies/${enemy.avatar}.png`;
+    enemyImg.src = `${BASE_PATH}assets/enemies/${enemy.avatar}.png`;
 
     startFightBlock.style.display = "none";
     battleBlock.style.display = "block";
