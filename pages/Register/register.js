@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       localStorage.setItem("characterInfo", JSON.stringify(character));
-      if (characterName.value) location.href = "/pages/Main/main.html";
+      if (characterName.value) location.href = "pages/Main/main.html";
     } catch (e) {}
   });
 });
