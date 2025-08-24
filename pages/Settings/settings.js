@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
         characterInfo = JSON.parse(characterInfo);
         characterInfo.name = characterName.value;
         localStorage.setItem("characterInfo", JSON.stringify(characterInfo));
+        alert('Name changed successfully');
       }
-    } catch (e) {}
+    } catch (e) {
+      alert('Error:' + e);
+    }
   });
 });

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const character = {
       name: characterName.value,
-      avatar: "DEFAULT",
+      avatar: "character1",
       wins: 0,
       loses: 0,
     };
