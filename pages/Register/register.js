@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const BASE_PATH = window.location.pathname.includes("/not-fight-club/")
+    ? "/not-fight-club/"
+    : "/";
+
   const characterName = document.getElementById("character-name");
   const registerBtn = document.querySelector(".register__button");
 
@@ -16,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       localStorage.setItem("characterInfo", JSON.stringify(character));
-      if (characterName.value) location.href = "pages/Main/main.html";
+      if (characterName.value)
+        location.href = BASE_PATH + "pages/Main/main.html";
     } catch (e) {}
   });
 });
