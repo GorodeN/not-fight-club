@@ -64,6 +64,12 @@ input[type="text"]:hover {
   border-color: #1ecd97;
 }
 
+button:disabled,
+input[type="text"]:disabled {
+  color: #abadad;
+  border-color: #abadad;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   accent-color: black;

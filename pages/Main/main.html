@@ -49,20 +49,22 @@
         <div class="main__start-fight">
           <div class="main__enemy-select">
             <label class="main__enemy-type input-label">
-              <img class="enemy__image" src="../../assets/enemies/enemy1.png" alt="Enemy 1">
+              <img class="enemy__image" src="../../assets/enemies/enemy1.png" alt="Ultron">
 
               <div>
-                <input type="radio" data-enemy="enemy1" name="enemy" value="Enemy 1" checked>
-                <span class="input-title">Enemy 1</span>
+                <input type="radio" data-enemy="enemy1" name="enemy" value="Ultron" checked>
+                <span class="input-title">Ultron</span>
+                <span class="input-subtitle">(2 atk, 1 def)</span>
               </div>
             </label>
 
             <label class="main__enemy-type input-label">
-              <img class="enemy__image" src="../../assets/enemies/enemy2.png" alt="Enemy 2">
+              <img class="enemy__image" src="../../assets/enemies/enemy2.png" alt="Thanos">
 
               <div>
-                <input type="radio" data-enemy="enemy2" name="enemy" value="Enemy 2">
-                <span class="input-title">Enemy 2</span>
+                <input type="radio" data-enemy="enemy2" name="enemy" value="Thanos">
+                <span class="input-title">Thanos</span>
+                <span class="input-subtitle">(1 atk, 3 def)</span>
               </div>
             </label>
           </div>
@@ -70,10 +72,10 @@
           <button type="button" class="main__fight-btn" aria-label="Start Fight">Fight</button>
         </div>
 
-        <div class="main__battle battle" style="display: none;">
+        <div class="main__battle battle">
           <div class="battle__process">
             <div class="battle__character">
-              <h2 class="battle__character-name">Guest</h2>
+              <h2 class="battle__character-name"></h2>
               <img class="battle__character-image" src="../../assets/characters/character1.png" alt="Character">
               <progress class="battle__character-health--progress" min="0" max="120" value="120"></progress>
               <p><span class="battle__character-health--remaining">120</span> / <span
@@ -135,10 +137,11 @@
               </div>
 
               <button type="button" class="main__attack-btn" aria-label="Attack">Attack</button>
+              <button type="button" class="main__new-fight-btn" aria-label="New Fight">New Fight</button>
             </div>
 
             <div class="battle__enemy">
-              <h2 class="battle__enemy-name">Enemy 1</h2>
+              <h2 class="battle__enemy-name"></h2>
               <img class="battle__enemy-image" src="../../assets/enemies/enemy1.png" alt="Enemy">
               <progress class="battle__enemy-health--progress" min="0" max="120" value="120"></progress>
               <p><span class="battle__enemy-health--remaining">120</span> / <span

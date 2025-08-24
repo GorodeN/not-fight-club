@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const characterLoses = document.querySelector(".character__loses-count");
   const characterChangeBtn = document.querySelector(".character__change-btn");
 
-  characterImg.src =
-    "/assets/characters/" + JSON.parse(characterInfo).avatar + ".png";
+  characterImg.src = `/assets/characters/${
+    JSON.parse(characterInfo).avatar
+  }.png`;
   characterName.innerHTML = JSON.parse(characterInfo).name;
   characterWins.innerHTML = JSON.parse(characterInfo).wins;
   characterLoses.innerHTML = JSON.parse(characterInfo).loses;
@@ -25,10 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     characterRadio.addEventListener("change", function () {
       if (this.checked) {
-        characterImg.src =
-          "/assets/characters/" +
-          characterRadio.dataset.characterAvatar +
-          ".png";
+        characterImg.src = `/assets/characters/${characterRadio.dataset.characterAvatar}.png`;
       }
     });
   });

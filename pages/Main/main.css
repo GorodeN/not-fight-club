@@ -39,6 +39,15 @@
   border-color: #1ecd97;
 }
 
+.input-subtitle {
+  color: rgb(148, 145, 145);
+  font-size: small;
+}
+
+.main__battle {
+  display: none;
+}
+
 .battle__process {
   display: flex;
   justify-content: space-between;
@@ -57,8 +66,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
+  padding: 55px 0;
 }
 
 .options__description {
@@ -67,7 +77,7 @@
 
 .options__zones {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -80,4 +90,36 @@
 
 .options__separator {
   border-right: 1px solid black;
+}
+
+.main__new-fight-btn {
+  display: none;
+}
+
+.battle__log {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0;
+  margin-top: 40px;
+  border-top: 1px solid black;
+}
+
+.log-character {
+  color: green;
+  font-weight: bold;
+}
+
+.log-enemy {
+  color: red;
+  font-weight: bold;
+}
+
+.log-zone {
+  color: blue;
+  font-weight: bold;
+}
+
+.log-damage {
+  font-weight: bold;
 }
